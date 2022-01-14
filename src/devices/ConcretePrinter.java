@@ -1,8 +1,8 @@
 package devices;
 
-public class Print extends Device {
+public class ConcretePrinter extends Device implements Printer {
 
-	public Print(String serialNumber) {
+	public ConcretePrinter(String serialNumber) {
 		super(serialNumber);
 	}
 
@@ -11,8 +11,8 @@ public class Print extends Device {
 		System.out.println("Printer processing: " + doc);		
 	}
 	
+	@Override
 	public void print(String doc) {
 		System.out.println("Printing: " + doc);
-	}	
-
+	}
 }
